@@ -1,10 +1,15 @@
 import gradio as gr
-from app.summarizer import generate_summmary
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from app.summarizer import generate_summary
 
 def summarize_input(text):
     return generate_summary(text)
 
-demo=gr.interface(
+demo=gr.Interface(
     fn=summarize_input,
     inputs=gr.Textbox(lines=10, label="Enter text to summarize"),
     outputs=gr.Textbox(label="Summary"),
@@ -14,3 +19,5 @@ demo=gr.interface(
 
 if __name__=="__main__":
     demo.launch()
+
+
