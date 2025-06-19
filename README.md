@@ -1,13 +1,16 @@
-# Project: GenAssist
-An LLM-powered summarization and extraction system with a FastAPI backend, Gradio frontend, Dockerized deployment, and Hugging Face Spaces readiness.
+# GenAssist
 
-# Stack Summary:
-Model: Hugging Face Transformers (facebook/bart-large-cnn for summarization)
+**GenAssist** is a lightweight, deployable LLM-powered summarization tool. It uses Hugging Face's BART model for real-time summarization, wrapped in a FastAPI backend and a Gradio frontend. It can be deployed locally, via Docker, or on cloud platforms like Hugging Face Spaces.
 
-API: FastAPI
+## Features
+- LLM-based summarization (BART-large)
+- REST API with FastAPI
+- Interactive UI with Gradio
+- Docker-ready
+- CI/CD-enabled
 
-UI: Gradio (interacts with FastAPI or shared pipeline)
+## Quick Start
 
-Containerization: Docker
-
-Deployment: Hugging Face Spaces (via app.py for Spaces compatibility)
+### 1. Install dependencies
+```bash
+pip install -r requirements.txt
